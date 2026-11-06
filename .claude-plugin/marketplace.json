@@ -1,0 +1,11 @@
+{
+  "name": "grill-me-back",
+  "owner": { "name": "Alexandr Prozorov", "email": "alexandr.a.prozorov@gmail.com" },
+  "plugins": [
+    {
+      "name": "grill-me-back",
+      "source": "./",
+      "description": "The AI quizzes you on work it did until you understand it."
+    }
+  ]
+}

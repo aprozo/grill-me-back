@@ -1,0 +1,9 @@
+{
+  "name": "grill-me-back",
+  "version": "0.1.0",
+  "description": "The AI quizzes you on work it did until you understand it.",
+  "author": { "name": "Alexandr Prozorov", "email": "alexandr.a.prozorov@gmail.com", "url": "https://github.com/aprozo" },
+  "repository": "https://github.com/aprozo/grill-me-back",
+  "license": "MIT",
+  "keywords": ["learning", "review", "quiz"]
+}
