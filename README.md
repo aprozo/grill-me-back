@@ -7,11 +7,9 @@ An agent skill ([Agent Skills](https://agentskills.io) format): after the AI did
 An agent in auto-accept mode can write in an hour what would take you a week. If you can't explain it, change it or debug it, you can't use it. `grill-me` has the AI question you before the work; `grill-me-back` questions you after it.
 
 ```
-AI:  Why is the efficiency correction applied before the background subtraction?
-You: background is estimated from data, so it already includes the efficiency
-AI:  Right. If the correction were applied after, what would happen to the yield?
-You: too high?
-AI:  Why?
+AI:  The p-value is 0.03. What does that number actually say?
+You: 3% chance the null is true
+AI:  No. Hint: it's computed assuming the null is true. Try again.
 ```
 
 ## Install
