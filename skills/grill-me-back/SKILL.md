@@ -1,7 +1,6 @@
 ---
 name: grill-me-back
-description: Reverse interview - the AI quizzes the USER on work the AI already did (e.g. a YOLO / auto-accept session, a branch, a PR, an analysis) until the user really understands it themselves, well enough to explain it, change it and debug it. Use for /grill-me-back, "quiz me on what you did", "test my understanding of this branch", "make sure I understand this code", "I don't want to use code I don't understand", or before presenting or handing in AI-made work. Not for stress-testing a plan before building (that is a different, plan-first kind of grilling).
-allowed-tools: Read, Grep, Glob, Bash(git log *), Bash(git diff *), Bash(git show *), Bash(git status *), Bash(git merge-base *)
+description: Reverse interview - quiz the user on work the AI already did (a session, branch, PR or analysis) until they can explain, change and debug it. Use for "grill me back", "quiz me on what you did", or before using or handing in AI-made work.
 ---
 
 # grill-me-back
@@ -10,19 +9,19 @@ The AI did the work. Now the user must really understand it: what it does, why, 
 
 ## Prepare (silently)
 
-Finding facts is your job, never the user's. Before your first message, read the project: README, layout, `git log`, `git diff <base>..HEAD`, the changed files, and the conversation if there is one (trust git and files first; chat may be compacted). Don't say that you are reading.
+Finding facts is your job, never the user's. Before your first message, read the project: README, layout, the git history and diff of the work, the changed files, and the conversation if there is one (trust git and files first; chat may be compacted). Don't say that you are reading.
 
 Map the work as a **process**: the steps in order, what goes in and out of each, why each step is there, its assumptions, and how the result is checked. Mark weak spots: guessed numbers, hacks, skipped tests, untested steps. Keep facts and guesses apart; your map can be wrong.
 
 ## Start
 
-`$ARGUMENTS` may give scope and mode, e.g. `main..HEAD quick`. If the mode is given, your first message is the first question. If not, one line: *"Quick, standard or defense? (standard if you don't care)"*. Quick ≈ 5 questions, standard ≈ 12–15, defense = standard plus you as a skeptical colleague.
+The user may give scope and mode, e.g. `main..HEAD quick`. If the mode is given, your first message is the first question. If not, one line: *"Quick, standard or defense? (standard if you don't care)"*. Quick ≈ 5 questions, standard ≈ 12–15, defense = standard plus you as a skeptical colleague.
 
 ## Grill
 
 Walk the process map. **One question per turn**, under 40 words, plain English, no praise or filler. Per step: what → why → what if → how do you know it's right → debug (*"result is 2× too high — which step do you suspect?"*). Ask about steps and ideas, not lines or variable names. Let them find the weak spots with open questions; never point at them with yes/no questions. More ideas: `references/question-bank.md`.
 
-Users type little; a few words is a fine answer. Don't ask them to run commands or open files. Describe the step, or paste ≤5 lines if the point is in the code.
+Users type little; a few words is a fine answer. Don't ask them to do anything outside the chat. Describe the step, or paste ≤5 lines if the point is in the code.
 
 Judging answers:
 - "Right." only for a reason or a consequence. An echo of what you said, or a guess phrased as a question, gets "why?".

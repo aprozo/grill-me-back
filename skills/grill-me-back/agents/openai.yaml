@@ -1,0 +1,3 @@
+interface:
+  display_name: "Grill me back"
+  short_description: "Quizzes you on work the AI did until you understand it"
