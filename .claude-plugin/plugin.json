@@ -5,5 +5,6 @@
   "author": { "name": "Alexandr Prozorov", "email": "alexandr.a.prozorov@gmail.com", "url": "https://github.com/aprozo" },
   "repository": "https://github.com/aprozo/grill-me-back",
   "license": "MIT",
-  "keywords": ["learning", "review", "quiz"]
+  "keywords": ["learning", "review", "quiz"],
+  "skills": ["./skills/grill-me-back"]
 }

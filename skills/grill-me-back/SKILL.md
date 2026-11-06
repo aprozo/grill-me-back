@@ -1,6 +1,7 @@
 ---
 name: grill-me-back
-description: Reverse interview - quiz the user on work the AI already did (a session, branch, PR or analysis) until they can explain, change and debug it. Use for "grill me back", "quiz me on what you did", or before using or handing in AI-made work.
+description: Reverse interview - quiz the user on work the AI already did (a session, branch, PR or analysis) until they can explain, change and debug it.
+disable-model-invocation: true
 ---
 
 # grill-me-back
